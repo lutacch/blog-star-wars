@@ -3,7 +3,7 @@ import {useHistory} from "react-router-dom";
 
 
 const MyCard = (props) =>{
-    const {imagen, name, uid} = props; 
+    const {name, uid} = props; 
 
     const history = useHistory();
 
@@ -15,16 +15,16 @@ const MyCard = (props) =>{
 
 
     return(
-
-	<div className="col text-center mt-5">
-    <div className="card" >
-      <img src={imagen} className="card-img-top" alt="..."></img>
-      <div className="card-body bg-black">
-        <p className="card-text text-white">{name}</p>
-      </div>
-      <button onClick={handleClick}>Ir a la descripcion</button>
-    </div>
+        <div className="col text-center mt-5">
+          <div className="card" >
+            <img src={`https://starwars-visualguide.com/assets/img/characters/${uid}.jpg`} className="card-img-top" alt="..."></img>
+            <div className="card-body bg-black">
+                <p className="card-text text-white">{name}</p>
+            </div>
+            <button onClick={handleClick}>Ir a la descripcion</button>
         </div>
+        </div>
+
 
 
     )
